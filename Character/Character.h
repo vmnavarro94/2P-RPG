@@ -16,7 +16,11 @@ protected:
     int defense;
     int speed;
 public:
-    Character(string, int, int, int, int);
+    Character(string _name, int _health, int _attack, int _defense, int _speed);
+
+    virtual void doAttack(Character *target) = 0;
+    virtual void takeDamage(int damage) = 0;
+
     string getName();
     int getHealth();
     int getAttack();

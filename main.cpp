@@ -1,23 +1,22 @@
 #include <iostream>
 #include "Player/Player.h"
 #include "Enemy/Enemy.h"
+#include "Combat/Combat.h"
 
 int main() {
-    Player *player = new Player("Victor", 100, 8, 4, 10);
+    Player *player = new Player("Victor", 100, 8, 4, 3);
     Enemy *enemy = new Enemy("Estudiante de Redes", 50, 5, 2, 5, 10);
 
-    cout << player->toString() << endl;
-    cout << enemy->toString() << endl;
+    vector<Character*> participants;
 
-    cout << "=====================" << endl;
+    participants.push_back(player);
+    participants.push_back(enemy);
 
-    player->doAttack(enemy);
-    enemy->doAttack(player);
-
-    cout << player->toString() << endl;
-    cout << enemy->toString() << endl;
+    Combat *combat = new Combat(participants);
+    combat->doCombat();
 
     delete player;
     delete enemy;
+    delete combat;
     return 0;
 }

@@ -3,8 +3,11 @@
 //
 
 #include "Player.h"
+#include <iostream>
 
-Player::Player(string _name, int _health, int _attack, int _defense, int _speed) : Character(_name, _health, _attack, _defense, _speed) {
+using namespace std;
+
+Player::Player(string _name, int _health, int _attack, int _defense, int _speed) : Character(_name, _health, _attack, _defense, _speed, true) {
     level = 1;
     experience = 0;
 }
@@ -17,6 +20,9 @@ void Player::takeDamage(int damage) {
     int trueDamage = damage - defense;
 
     health-= trueDamage;
+
+    cout << name << " took " << trueDamage << " damage!" << endl;
+
 }
 
 void Player::levelUp() {

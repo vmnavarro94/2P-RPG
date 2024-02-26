@@ -36,3 +36,15 @@ void Player::gainExperience(int exp) {
         experience = 100-experience;
     }
 }
+
+Character* Player::selectTarget(vector<Enemy*> possibleTargets) {
+    int selectedTarget = 0;
+    cout << "Select a target: " << endl;
+    for (int i = 0; i < possibleTargets.size(); i++) {
+        cout << i << ". " << possibleTargets[i]->getName() << endl;
+    }
+
+    //TODO: Add input validation
+    cin >> selectedTarget;
+    return possibleTargets[selectedTarget];
+}

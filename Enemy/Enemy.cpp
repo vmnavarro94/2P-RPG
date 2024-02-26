@@ -28,3 +28,16 @@ void Enemy::takeDamage(int damage) {
 int Enemy::getExperience() {
     return experience;
 }
+
+Character* Enemy::selectTarget(vector<Player*> possibleTargets) {
+    //target with less health
+    int lessHealth = 9999999;
+    Character* target = nullptr;
+    for(auto character : possibleTargets) {
+        if(character->getHealth() < lessHealth) {
+            lessHealth = character->getHealth();
+            target = character;
+        }
+    }
+    return target;
+}

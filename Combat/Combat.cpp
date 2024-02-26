@@ -15,6 +15,21 @@ bool compareSpeed(Character *a, Character *b) {
 
 Combat::Combat(vector<Character *> _participants) {
     participants = std::move(_participants);
+    for(auto participant : participants) {
+        if (participant->getIsPlayer()) {
+            partyMembers.push_back((Player *) participant);
+        } else {
+            enemies.push_back((Enemy *) participant);
+        }
+    }
+}
+
+Combat::Combat(vector<Player*> _partyMembers, vector<Enemy*> _enemies) {
+    partyMembers = std::move(_partyMembers);
+    enemies = std::move(_enemies);
+    participants = vector<Character*>();
+    participants.insert(participants.end(), partyMembers.begin(), partyMembers.end());
+    participants.insert(participants.end(), enemies.begin(), enemies.end());
 }
 
 Combat::Combat() {
@@ -23,6 +38,11 @@ Combat::Combat() {
 
 void Combat::addParticipant(Character *participant) {
     participants.push_back(participant);
+    if(participant->getIsPlayer()){
+        partyMembers.push_back((Player*) participant);
+    } else {
+        enemies.push_back((Enemy*) participant);
+    }
 }
 
 void Combat::combatPrep() {
@@ -52,17 +72,36 @@ Character* Combat::getTarget(Character* attacker) {
 }
 
 void Combat::doCombat() {
+    cout<< "Inicio del combate" << endl;
     combatPrep();
     while(participants.size() > 1){
-        vector<Character*>::iterator it;
-        for(it = participants.begin(); it != participants.end(); it++) {
-            Character*target = getTarget(*it);
+        vector<Character*>::iterator it = participants.begin();
+        while(it != participants.end()) {
+            Character* target = nullptr;
+            if((*it)->getIsPlayer()) {
+                target = ((Player *) *it)->selectTarget(enemies);
+            } else {
+                target = ((Enemy *) *it)->selectTarget(partyMembers);
+            }
             (*it)->doAttack(target);
-
             if(target->getHealth() <= 0){
-                // TODO: Find a better way to remove the target from the participants vector
-                participants.erase(remove(participants.begin(), participants.end(), target), participants.end());
-                cout<<(*it)->getName()<<" has won the battle!"<<endl;
+                it = participants.erase(remove(participants.begin(), participants.end(), target), participants.end());
+                if(target->getIsPlayer()){
+                    partyMembers.erase(remove(partyMembers.begin(), partyMembers.end(), target), partyMembers.end());
+                    if(partyMembers.size() == 0){
+                        cout << "Game Over" << endl;
+                        return;
+                    }
+                } else {
+                    cout << "You killed enemy " << target->getName() << endl;
+                    enemies.erase(remove(enemies.begin(), enemies.end(), target), enemies.end());
+                    if(enemies.size() == 0){
+                        cout << "Victory" << endl;
+                        return;
+                    }
+                }
+            } else {
+                it++;
             }
         }
     }

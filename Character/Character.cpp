@@ -39,3 +39,11 @@ string Character::toString() {
 bool Character::getIsPlayer() {
     return isPlayer;
 }
+
+bool Character::flee(Character*target) {
+    if(this->speed > target->speed)
+        return true;
+
+    int chance = rand() % 100;
+    return chance > 30;
+}

@@ -22,6 +22,7 @@ public:
     virtual void doAttack(Character *target) = 0;
     virtual void takeDamage(int damage) = 0;
 
+    bool flee(Character* target);
     string getName();
     int getHealth();
     int getAttack();

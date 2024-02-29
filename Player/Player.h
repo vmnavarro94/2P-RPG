@@ -6,6 +6,7 @@
 #define RPG_PLAYER_H
 #include "../Character/Character.h"
 #include "../Enemy/Enemy.h"
+#include "../Combat/Action.h"
 #include <vector>
 
 class Enemy;
@@ -23,8 +24,10 @@ public:
     void doAttack(Character *target) override;
     void takeDamage(int damage) override;
     Character* selectTarget(vector<Enemy*> possibleTargets);
+    Action takeAction(vector<Enemy*> enemies);
 
     void gainExperience(int exp);
+
     //TODO: Implement use object
 };
 

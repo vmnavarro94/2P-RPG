@@ -79,6 +79,12 @@ build CMakeFiles/rpg.dir/Combat/Combat.cpp.o: CXX_COMPILER__rpg_unscanned_Debug 
   OBJECT_DIR = CMakeFiles/rpg.dir
   OBJECT_FILE_DIR = CMakeFiles/rpg.dir/Combat
 
+build CMakeFiles/rpg.dir/Combat/Action.cpp.o: CXX_COMPILER__rpg_unscanned_Debug /Users/vnavarro/ceti/POO-2P/rpg/Combat/Action.cpp || cmake_object_order_depends_target_rpg
+  DEP_FILE = CMakeFiles/rpg.dir/Combat/Action.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/rpg.dir
+  OBJECT_FILE_DIR = CMakeFiles/rpg.dir/Combat
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target rpg
@@ -87,7 +93,7 @@ build CMakeFiles/rpg.dir/Combat/Combat.cpp.o: CXX_COMPILER__rpg_unscanned_Debug 
 #############################################
 # Link the executable rpg
 
-build rpg: CXX_EXECUTABLE_LINKER__rpg_Debug CMakeFiles/rpg.dir/main.cpp.o CMakeFiles/rpg.dir/Character/Character.cpp.o CMakeFiles/rpg.dir/Player/Player.cpp.o CMakeFiles/rpg.dir/Enemy/Enemy.cpp.o CMakeFiles/rpg.dir/Combat/Combat.cpp.o
+build rpg: CXX_EXECUTABLE_LINKER__rpg_Debug CMakeFiles/rpg.dir/main.cpp.o CMakeFiles/rpg.dir/Character/Character.cpp.o CMakeFiles/rpg.dir/Player/Player.cpp.o CMakeFiles/rpg.dir/Enemy/Enemy.cpp.o CMakeFiles/rpg.dir/Combat/Combat.cpp.o CMakeFiles/rpg.dir/Combat/Action.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk
   OBJECT_DIR = CMakeFiles/rpg.dir
   POST_BUILD = :

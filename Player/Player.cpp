@@ -23,6 +23,9 @@ void Player::takeDamage(int damage) {
 
     cout << name << " took " << trueDamage << " damage!" << endl;
 
+    if(health <= 0) {
+        cout << name << " has been defeated!" << endl;
+    }
 }
 
 void Player::levelUp() {
@@ -47,4 +50,31 @@ Character* Player::selectTarget(vector<Enemy*> possibleTargets) {
     //TODO: Add input validation
     cin >> selectedTarget;
     return possibleTargets[selectedTarget];
+}
+
+Action Player::takeAction(vector<Enemy*> enemies) {
+    int action = 0;
+    cout << "Select an action: " << endl
+    << "1. Attack" << endl;
+
+    //TODO: Validate input
+    cin >> action;
+    Action currentAction;
+    Character* target = nullptr;
+
+    switch(action) {
+        case 1:
+            target = selectTarget(enemies);
+            currentAction.target = target;
+            currentAction.action = [this, target](){
+                doAttack(target);
+            };
+            currentAction.speed = getSpeed();
+            break;
+        default:
+            cout << "Invalid action" << endl;
+            break;
+    }
+
+    return currentAction;
 }

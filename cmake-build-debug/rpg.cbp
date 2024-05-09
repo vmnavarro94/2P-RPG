@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="rpg"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -j12 -f &quot;/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -j12 -f &quot;/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -j12 -f &quot;/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -j12 -f &quot;/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rpg">
+				<Option output="/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug/rpg" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -j12 -f &quot;/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug/Makefile&quot;  VERBOSE=1 rpg"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -j12 -f &quot;/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -j12 -f &quot;/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -j12 -f &quot;/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rpg/fast">
+				<Option output="/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug/rpg" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -j12 -f &quot;/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug/Makefile&quot;  VERBOSE=1 rpg/fast"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -j12 -f &quot;/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -j12 -f &quot;/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -j12 -f &quot;/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -j12 -f &quot;/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -j12 -f &quot;/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -j12 -f &quot;/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -j12 -f &quot;/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -j12 -f &quot;/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -j12 -f &quot;/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -j12 -f &quot;/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -j12 -f &quot;/Users/vnavarro/CETI/2P-POO/2P-RPG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/vnavarro/CETI/2P-POO/2P-RPG/Character/Character.cpp">
+			<Option target="rpg"/>
+		</Unit>
+		<Unit filename="/Users/vnavarro/CETI/2P-POO/2P-RPG/Character/Character.h">
+			<Option target="rpg"/>
+		</Unit>
+		<Unit filename="/Users/vnavarro/CETI/2P-POO/2P-RPG/Combat/Action.cpp">
+			<Option target="rpg"/>
+		</Unit>
+		<Unit filename="/Users/vnavarro/CETI/2P-POO/2P-RPG/Combat/Action.h">
+			<Option target="rpg"/>
+		</Unit>
+		<Unit filename="/Users/vnavarro/CETI/2P-POO/2P-RPG/Combat/Combat.cpp">
+			<Option target="rpg"/>
+		</Unit>
+		<Unit filename="/Users/vnavarro/CETI/2P-POO/2P-RPG/Combat/Combat.h">
+			<Option target="rpg"/>
+		</Unit>
+		<Unit filename="/Users/vnavarro/CETI/2P-POO/2P-RPG/Enemy/Enemy.cpp">
+			<Option target="rpg"/>
+		</Unit>
+		<Unit filename="/Users/vnavarro/CETI/2P-POO/2P-RPG/Enemy/Enemy.h">
+			<Option target="rpg"/>
+		</Unit>
+		<Unit filename="/Users/vnavarro/CETI/2P-POO/2P-RPG/Files/FileHandler.cpp">
+			<Option target="rpg"/>
+		</Unit>
+		<Unit filename="/Users/vnavarro/CETI/2P-POO/2P-RPG/Files/FileHandler.h">
+			<Option target="rpg"/>
+		</Unit>
+		<Unit filename="/Users/vnavarro/CETI/2P-POO/2P-RPG/Player/Player.cpp">
+			<Option target="rpg"/>
+		</Unit>
+		<Unit filename="/Users/vnavarro/CETI/2P-POO/2P-RPG/Player/Player.h">
+			<Option target="rpg"/>
+		</Unit>
+		<Unit filename="/Users/vnavarro/CETI/2P-POO/2P-RPG/Utils.h">
+			<Option target="rpg"/>
+		</Unit>
+		<Unit filename="/Users/vnavarro/CETI/2P-POO/2P-RPG/main.cpp">
+			<Option target="rpg"/>
+		</Unit>
+		<Unit filename="/Users/vnavarro/CETI/2P-POO/2P-RPG/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
